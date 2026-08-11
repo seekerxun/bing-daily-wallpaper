@@ -2,6 +2,8 @@
 
 自动获取 Bing 每日壁纸并设置为 macOS 桌面壁纸，通过 LaunchAgent 实现用户登录后自动启动和后台定时运行。
 
+Windows 10/11 用户请参阅 [Windows 版安装与使用说明](windows/README.md)。Windows 版使用系统自带 PowerShell 5.1、官方多显示器接口和当前用户计划任务，不影响下方现有 macOS 用法。
+
 ## 文件说明
 
 - `bing_wallpaper.sh` — 主脚本（**源文件**），负责获取当日 Bing 壁纸、下载 UHD 图片、核对并设置桌面壁纸、清理旧文件。
