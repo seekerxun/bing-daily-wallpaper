@@ -1,0 +1,38 @@
+{
+  "$schema": "../DevDock/DevDock/DevDock/Resources/devdock-project.schema.json",
+  "detail": "每日壁纸自动更新",
+  "name": "Bing 壁纸",
+  "schemaVersion": 1,
+  "iconPath": "bing-icon-solid.png",
+
+
+  "targets": [
+    {
+      "detail": "LaunchAgent 每小时检查一次",
+      "kind": "scheduledTask",
+      "name": "定时更新",
+      "startCommand": {
+        "arguments": [
+          "bootstrap",
+          "gui/{uid}",
+          "{home}/Library/LaunchAgents/com.seekerxun.bingwallpaper.plist"
+        ],
+        "executable": "/bin/launchctl"
+      },
+      "statusCommand": {
+        "arguments": [
+          "print",
+          "gui/{uid}/com.seekerxun.bingwallpaper"
+        ],
+        "executable": "/bin/launchctl"
+      },
+      "stopCommand": {
+        "arguments": [
+          "bootout",
+          "gui/{uid}/com.seekerxun.bingwallpaper"
+        ],
+        "executable": "/bin/launchctl"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.seekerxun.bingwallpaper</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/seekerxun/Library/Scripts/bing_wallpaper.sh</string>
+    </array>
+
+    <!-- LaunchAgent 在用户登录并被加载时立即跑一次 -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- 之后每小时检查一次；StartInterval 在电脑睡眠时错过的执行不会补跑 -->
+    <key>StartInterval</key>
+    <integer>3600</integer>
+
+    <key>StandardOutPath</key>
+    <string>/Users/seekerxun/Pictures/BingWallpapers/launchd_stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/seekerxun/Pictures/BingWallpapers/launchd_stderr.log</string>
+</dict>
+</plist>

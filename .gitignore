@@ -1,0 +1,14 @@
+.DS_Store
+
+# Python runtime files
+__pycache__/
+*.py[cod]
+
+# Runtime state and logs
+*.log
+.last_url
+.bing_wallpaper.*
+.wallpaper_index_backup.plist
+
+# Downloaded daily wallpapers
+bing_*.jpg
